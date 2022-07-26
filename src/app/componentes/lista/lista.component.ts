@@ -3,6 +3,7 @@ import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Afiliado } from 'src/app/model/afiliado.model';
 import { AfiliadosService } from 'src/app/servicios/afiliados.service';
+import { ObservacionesComponent } from '../observaciones/observaciones.component';
 
 export interface Observaciones {
   observacines: string;
@@ -46,20 +47,10 @@ export class ListaComponent implements OnInit {
     this.dialog.open(eliminarDialog);
   }
 
-  viewObservaciones(observaciones:string) {
-    this.dialog.open(observacionesDialog, {
-      width: '250px',
-      data: {observaciones: observaciones},
-    });  }
-
-}
-
-@Component({
-  selector: 'observaciones-dialog',
-  templateUrl: 'observacionesDialog.html',
-})
-export class observacionesDialog {
-  constructor (@Inject(MAT_DIALOG_DATA) public observaciones:Observaciones) {}
+  viewObservaciones(id:number) {
+    this.afiliadosService.id = id;
+    this.dialog.open(ObservacionesComponent);
+  }
 }
 
 @Component({

@@ -17,6 +17,7 @@ import { AgregarComponent } from './componentes/agregar/agregar.component';
 import { ListaComponent } from './componentes/lista/lista.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { EditarComponent } from './componentes/editar/editar.component';
+import { ObservacionesComponent } from './componentes/observaciones/observaciones.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EditarComponent } from './componentes/editar/editar.component';
     AgregarComponent,
     ListaComponent,
     InicioComponent,
-    EditarComponent
+    EditarComponent,
+    ObservacionesComponent
   ],
   imports: [
     BrowserModule,

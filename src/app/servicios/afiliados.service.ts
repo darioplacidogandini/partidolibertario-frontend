@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AfiliadosService {
 
+  id:number = 0;
   private baseURL = 'https://afiliados-backend.herokuapp.com/afiliados';
 
   constructor(private http:HttpClient) {}
