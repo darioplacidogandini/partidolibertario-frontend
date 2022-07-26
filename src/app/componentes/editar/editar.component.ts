@@ -29,7 +29,6 @@ export class EditarComponent implements OnInit {
       .subscribe(data => {
         console.log(data);
       });
-    this.dialog.open(editarDialog);
     this.router.navigate(['lista']);
   }
 
