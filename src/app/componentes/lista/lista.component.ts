@@ -25,8 +25,8 @@ export class ListaComponent implements OnInit {
     public dialog:MatDialog) {}
 
   ngOnInit(): void {
-    alert("Cargando...");
-    setTimeout(() => this.listAfiliados(),8000);
+    this.dialog.open(LoadingDialog);
+    setTimeout(() => this.listAfiliados(),this.dialog.closeAll(),8000);
   }
 
   listAfiliados() {
@@ -51,6 +51,12 @@ export class ListaComponent implements OnInit {
     this.route.navigate(['detalles',id]);
   }
 }
+
+@Component({
+  selector: 'loading.dialog',
+  templateUrl: 'loading.dialog.html',
+})
+export class LoadingDialog {}
 
 @Component({
   selector: 'eliminar-dialog',

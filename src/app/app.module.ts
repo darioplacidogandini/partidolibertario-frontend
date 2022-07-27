@@ -13,8 +13,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AgregarComponent } from './componentes/agregar/agregar.component';
-import { ListaComponent } from './componentes/lista/lista.component';
+import { ListaComponent, LoadingDialog } from './componentes/lista/lista.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { EditarComponent } from './componentes/editar/editar.component';
 import { DetallesComponent } from './componentes/detalles/detalles.component';
@@ -26,7 +27,8 @@ import { DetallesComponent } from './componentes/detalles/detalles.component';
     ListaComponent,
     InicioComponent,
     EditarComponent,
-    DetallesComponent
+    DetallesComponent,
+    LoadingDialog
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,8 @@ import { DetallesComponent } from './componentes/detalles/detalles.component';
     MatRadioModule,
     MatInputModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
