@@ -3,20 +3,20 @@ import { Afiliado } from 'src/app/model/afiliado.model';
 import { AfiliadosService } from 'src/app/servicios/afiliados.service';
 
 @Component({
-  selector: 'app-observaciones',
-  templateUrl: './observaciones.component.html',
-  styleUrls: ['./observaciones.component.css']
+  selector: 'app-detalles',
+  templateUrl: './detalles.component.html',
+  styleUrls: ['./detalles.component.css']
 })
-export class ObservacionesComponent implements OnInit {
+export class DetallesComponent implements OnInit {
 
   id:number = 0;
-  observaciones:Afiliado = new Afiliado();
+  afiliado:Afiliado = new Afiliado();
 
   constructor(private afiliadosService:AfiliadosService) {}
 
   ngOnInit(): void {
       this.afiliadosService.search(this.id).subscribe(data => {
-        this.observaciones = data;
+        this.afiliado = data;
       }, error => console.log(error));
   }
 }
