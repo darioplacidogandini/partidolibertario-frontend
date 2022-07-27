@@ -26,7 +26,8 @@ export class ListaComponent implements OnInit {
 
   ngOnInit(): void {
     this.dialog.open(LoadingDialog);
-    setTimeout(() => this.listAfiliados(),this.dialog.closeAll(),8000);
+    setTimeout(() => this.listAfiliados(),8000);
+    this.dialog.closeAll()
   }
 
   listAfiliados() {
