@@ -25,7 +25,8 @@ export class ListaComponent implements OnInit {
     public dialog:MatDialog) {}
 
   ngOnInit(): void {
-    this.listAfiliados();
+    alert("Cargando...");
+    setTimeout(() => this.listAfiliados(),8000);
   }
 
   listAfiliados() {

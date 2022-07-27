@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Afiliado } from 'src/app/model/afiliado.model';
 import { AfiliadosService } from 'src/app/servicios/afiliados.service';
 
@@ -12,9 +13,10 @@ export class DetallesComponent implements OnInit {
   id:number = 0;
   afiliado:Afiliado = new Afiliado();
 
-  constructor(private afiliadosService:AfiliadosService) {}
+  constructor(private route:ActivatedRoute,private afiliadosService:AfiliadosService) {}
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params['id'];
       this.afiliadosService.search(this.id).subscribe(data => {
         this.afiliado = data;
       }, error => console.log(error));
