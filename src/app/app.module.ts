@@ -19,6 +19,7 @@ import { ListaComponent, LoadingDialog } from './componentes/lista/lista.compone
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { EditarComponent } from './componentes/editar/editar.component';
 import { DetallesComponent } from './componentes/detalles/detalles.component';
+import { MatSelect, MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { DetallesComponent } from './componentes/detalles/detalles.component';
     MatFormFieldModule,
     MatRadioModule,
     MatInputModule,
+    MatSelectModule,
     MatGridListModule,
     MatDialogModule,
     MatProgressSpinnerModule

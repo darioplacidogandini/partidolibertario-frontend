@@ -18,8 +18,12 @@
           <input matInput [(ngModel)]="afiliado.dni">
         </mat-form-field>
         <mat-form-field appearance="fill">
-          <mat-label>Barrio</mat-label>
-          <input matInput [(ngModel)]="afiliado.circuito">
+            <mat-label>Barrio</mat-label>
+            <mat-select [(value)]="afiliado.circuito">
+              <mat-option *ngFor="let data" [value]="data">
+                {{afiliado.circuito}}
+              </mat-option>
+            </mat-select>
         </mat-form-field>
       </mat-grid-tile>
       </mat-grid-list>

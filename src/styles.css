@@ -5,3 +5,11 @@ mat-form-field {
     margin-left: 2px;
     margin-right: 2px;
 }
+
+.text-primary {
+    color: skyblue;
+}
+
+.align-row {
+    flex-direction: column;
+}

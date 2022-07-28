@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Afiliado } from 'src/app/model/afiliado.model';
 import { AfiliadosService } from 'src/app/servicios/afiliados.service';
+import * as data from '../../../assets/barrios.json';
 
 @Component({
   selector: 'app-agregar',
@@ -10,6 +11,7 @@ import { AfiliadosService } from 'src/app/servicios/afiliados.service';
 })
 export class AgregarComponent implements OnInit {
 
+  barrios:any = (data as any).default;
   afiliado: Afiliado = new Afiliado();
   value: String = '';
 
