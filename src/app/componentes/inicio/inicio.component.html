@@ -10,7 +10,18 @@
         </h1>
     </mat-grid-tile>
     <mat-grid-tile>
-        <a routerLink="/agregar">
+        <a routerLink="/iniciar-sesion"
+        *ngIf="!isUserLoggedIn()">
+            <button mat-flat-button color="primary">
+                INICIAR SESION
+            </button>
+        </a>
+        <a *ngIf="isUserLoggedIn()">
+            <button mat-flat-button color="warn">
+                CERRAR SESION
+            </button>
+        </a>
+        <a *ngIf="isUserLoggedIn()" routerLink="/agregar">
             <button mat-flat-button color="primary">
                 AGREGAR AFILIADO
             </button>

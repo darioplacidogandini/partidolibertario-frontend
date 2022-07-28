@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Afiliado } from 'src/app/model/afiliado.model';
 import { AfiliadosService } from 'src/app/servicios/afiliados.service';
+import * as data from '../../../assets/barrios.json';
 
 @Component({
   selector: 'app-editar',
@@ -11,6 +12,7 @@ import { AfiliadosService } from 'src/app/servicios/afiliados.service';
 })
 export class EditarComponent implements OnInit {
 
+  barrios:any = (data as any).default;
   id: number = 0;
   afiliado: Afiliado = new Afiliado();
 

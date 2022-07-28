@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -20,6 +20,7 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 import { EditarComponent } from './componentes/editar/editar.component';
 import { DetallesComponent } from './componentes/detalles/detalles.component';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatSelect, MatSelectModule } from '@angular/material/select';
     InicioComponent,
     EditarComponent,
     DetallesComponent,
-    LoadingDialog
+    LoadingDialog,
+    IniciarSesionComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,7 @@ import { MatSelect, MatSelectModule } from '@angular/material/select';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
     MatTableModule,
