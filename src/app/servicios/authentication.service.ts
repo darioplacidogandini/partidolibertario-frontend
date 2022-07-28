@@ -20,7 +20,7 @@ export class AuthenticationService {
 constructor(private httpClient:HttpClient) {}
 
 authenticate(username: string, password: string) {
-  return this.httpClient.post<any>('https://dariogandini-portfolio-backend.herokuapp.com/api/login',{username,password}).pipe(
+  return this.httpClient.post<any>('https://afiliados-backend.herokuapp.com/api/login',{username,password}).pipe(
   map(userData => {sessionStorage.setItem('username',username);
     let tokenStr= 'Bearer '+userData.token;
     sessionStorage.setItem('token', tokenStr);

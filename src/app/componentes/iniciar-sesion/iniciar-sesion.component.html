@@ -4,6 +4,8 @@
         <h2 mat-dialog-title>Iniciar sesión</h2>
       </mat-grid-tile>
     </mat-grid-list>
+    <mat-grid-list cols="1" rowHeight="100px">
+        <mat-grid-tile>
           <mat-form-field class="form-field" appearance="fill">
             <mat-label for="username">Usuario</mat-label>
             <input matInput appearance="fill" type="text" name="username" 
@@ -21,6 +23,8 @@
               {{getErrorMessages()}}
             </mat-error>
           </mat-form-field>
+        </mat-grid-tile>
+    </mat-grid-list>
     <mat-grid-list cols="1" rowHeight="40px">
       <mat-grid-tile>
           <button type="submit" mat-raised-button color="primary"

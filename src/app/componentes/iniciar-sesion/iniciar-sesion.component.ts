@@ -18,22 +18,16 @@ export class IniciarSesionComponent implements OnInit {
   constructor(private formBuilder:FormBuilder,public loginDialog:MatDialog,
     private loginservice: AuthenticationService) {
       this.loginForm = this.formBuilder.group({
-        username: new FormControl('', [Validators.required,Validators.email]),
-        password: new FormControl('', [Validators.required,Validators.minLength(8),Validators.pattern('@')]),
+        username: new FormControl('', [Validators.required]),
+        password: new FormControl('', [Validators.required]),
       })
     }
 
  ngOnInit() {}
 
   public getErrorMessages() {
-     if (this.loginForm.get('username')?.hasError('email')) {
-      return 'Ingrese un mail valido';
-     }
-     if (this.loginForm.get('password')?.hasError('minLength')) {
-      return 'La contraseña debe contener al menos 8 caracteres';
-     }
-     if (this.loginForm.get('password')?.hasError('pattern')) {
-      return 'La contraseña debe contener al menos uno de  los siguientes caracteres: @ -';
+     if (this.loginForm.get('username')?.hasError('required')) {
+      return 'Rellene este campo';
      }
      return 'Rellene este campo';
   }
