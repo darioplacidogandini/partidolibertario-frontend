@@ -46,28 +46,27 @@
             <input matInput [(ngModel)]="afiliado.observaciones ">
           </mat-form-field>
         </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-radio-group aria-label="Ver barrios o circuitos">
+            <mat-radio-button (click)="value = 'radio'" value="barrios">Barrios</mat-radio-button>
+            <br>
+            <mat-radio-button (click)="value = 'circuito'" value="circuitos">Circuitos</mat-radio-button>
+          </mat-radio-group>
+          <a *ngIf="getRadioValue(value)" href="
+          https://www.google.com/maps/d/viewer?mid=1FIwXIg3c-7AbJmVlvTIzTAONzX4&hl=es-419&gl=ar&ie=UTF8&oe=UTF8&msa=0&ll=-27.513025355756476%2C-58.75341289989938&z=12"
+          target="_blank">
+            <button type="button" mat-flat-button color="accent">VER</button>
+          </a>
+          <a *ngIf="!getRadioValue(value)" href="https://www.google.com/maps/d/embed?mid=1FIwXIg3c-7AbJmVlvTIzTAONzX4&hl=es-419&ehbc=2E312F"
+          target="_blank">
+            <button type="button" mat-flat-button color="accent">VER</button>
+          </a>
+        </mat-grid-tile>
       </mat-grid-list>
     <mat-grid-list cols="1" rowHeight="50px">
       <mat-grid-tile>
         <button type="submit" mat-flat-button color="primary">AGREGAR</button>
         <button type="button" routerLink="" mat-flat-button color="accent">VOLVER</button>
-      </mat-grid-tile>
-    </mat-grid-list>
-    <mat-grid-list cols="1" rowHeight="50px">
-      <mat-grid-tile>
-        <mat-radio-group aria-label="Ver barrios o circuitos">
-          <mat-radio-button (click)="value = 'radio'" value="barrios">Barrios</mat-radio-button>
-          <mat-radio-button (click)="value = 'circuito'" value="circuitos">Circuitos</mat-radio-button>
-        </mat-radio-group>
-        <a *ngIf="getRadioValue(value)" href="
-        https://www.google.com/maps/d/viewer?mid=1FIwXIg3c-7AbJmVlvTIzTAONzX4&hl=es-419&gl=ar&ie=UTF8&oe=UTF8&msa=0&ll=-27.513025355756476%2C-58.75341289989938&z=12"
-        target="_blank">
-          <button type="button" mat-flat-button color="accent">VER</button>
-        </a>
-        <a *ngIf="!getRadioValue(value)" href="https://www.google.com/maps/d/embed?mid=1FIwXIg3c-7AbJmVlvTIzTAONzX4&hl=es-419&ehbc=2E312F"
-        target="_blank">
-          <button type="button" mat-flat-button color="accent">VER</button>
-        </a>
       </mat-grid-tile>
     </mat-grid-list>
   </form>

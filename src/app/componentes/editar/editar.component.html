@@ -19,8 +19,8 @@
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label>Barrio</mat-label>
-            <mat-select [(value)]="afiliado.circuito">
-              <mat-option *ngFor="let barrios" [value]="barrios">
+            <mat-select *ngFor="let barrios" [(value)]="afiliado.circuito">
+              <mat-option [value]="afiliado.circuito">
                 {{barrios}}
               </mat-option>
             </mat-select>
