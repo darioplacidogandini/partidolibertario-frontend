@@ -1,5 +1,11 @@
 <div class="align-column">   
-    <h1 class="primary-text">Detalles del afiliado</h1>
+    <h1 class="primary-text">
+        Detalles del afiliado
+        <button type="button" routerLink="/lista" 
+        mat-flat-button color="accent">
+            VOLVER
+        </button>
+    </h1>
     <p mat-line>Nombre: {{afiliado.nombre}}</p>
     <p mat-line>Apellido: {{afiliado.apellido}}</p>
     <p mat-line>DNI: {{afiliado.dni}}</p>

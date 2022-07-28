@@ -19,11 +19,15 @@
         </mat-form-field>
         <mat-form-field appearance="fill">
           <mat-label>Barrio</mat-label>
-          <input matInput [(ngModel)]="afiliado.circuito">
+          <mat-select [(value)]="afiliado.circuito">
+            <mat-option *ngFor="let barrios" [value]="barrios">
+              {{barrios}}
+            </mat-option>
+          </mat-select>
         </mat-form-field>
       </mat-grid-tile>
-      </mat-grid-list>
-      <mat-grid-list cols="1" rowHeight="100px">
+    </mat-grid-list>
+    <mat-grid-list cols="1" rowHeight="100px">
         <mat-grid-tile>
           <mat-form-field appearance="fill">
             <mat-label>Mail</mat-label>
@@ -34,8 +38,8 @@
             <input matInput [(ngModel)]="afiliado.telefono">
           </mat-form-field>
         </mat-grid-tile>
-      </mat-grid-list>
-      <mat-grid-list cols="1" rowHeight="100px">
+    </mat-grid-list>
+    <mat-grid-list cols="1" rowHeight="100px">
         <mat-grid-tile>
           <mat-form-field appearance="fill">
             <mat-label>Observaciones</mat-label>

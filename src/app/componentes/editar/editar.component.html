@@ -20,8 +20,8 @@
         <mat-form-field appearance="fill">
             <mat-label>Barrio</mat-label>
             <mat-select [(value)]="afiliado.circuito">
-              <mat-option *ngFor="let data" [value]="data">
-                {{afiliado.circuito}}
+              <mat-option *ngFor="let barrios" [value]="barrios">
+                {{barrios}}
               </mat-option>
             </mat-select>
         </mat-form-field>
@@ -43,7 +43,7 @@
           <mat-grid-tile>
             <mat-form-field appearance="fill">
               <mat-label>Observaciones</mat-label>
-              <input matInput [(ngModel)]="afiliado.observaciones ">
+              <input matInput [(ngModel)]="afiliado.observaciones">
             </mat-form-field>
           </mat-grid-tile>
         </mat-grid-list>

@@ -16,6 +16,7 @@ export class DetallesComponent implements OnInit {
   constructor(private route:ActivatedRoute,private afiliadosService:AfiliadosService) {}
 
   ngOnInit(): void {
+    this.afiliado = new Afiliado();
     this.id = this.route.snapshot.params['id'];
       this.afiliadosService.search(this.id).subscribe(data => {
         this.afiliado = data;

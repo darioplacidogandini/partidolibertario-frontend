@@ -18,6 +18,7 @@ export class EditarComponent implements OnInit {
     private router:Router,private route:ActivatedRoute,public dialog:MatDialog) {}
 
   ngOnInit(): void {
+    this.afiliado = new Afiliado();
     this.id = this.route.snapshot.params['id'];
     this.afiliadoService.search(this.id).subscribe(data => {
       this.afiliado = data;
