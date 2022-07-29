@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 export class User{
   constructor(
@@ -17,7 +18,7 @@ export class JwtResponse{
 })
 export class AuthenticationService {
 
-constructor(private httpClient:HttpClient) {}
+constructor(private httpClient:HttpClient,private route:Router) {}
 
 authenticate(username: string, password: string) {
   return this.httpClient.post<any>('https://afiliados-backend.herokuapp.com/api/login',{username,password}).pipe(

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { AuthenticationService } from '../../servicios/authentication.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class IniciarSesionComponent implements OnInit {
   passwordFieldValue: string = '';
   invalidLogin = false;
 
-  constructor(private formBuilder:FormBuilder,public loginDialog:MatDialog,
+  constructor(private route:Router,private formBuilder:FormBuilder,public loginDialog:MatDialog,
     private loginservice: AuthenticationService) {
       this.loginForm = this.formBuilder.group({
         username: new FormControl('', [Validators.required]),
@@ -39,6 +40,7 @@ export class IniciarSesionComponent implements OnInit {
       data => {
         console.log(data);
         this.invalidLogin = false;
+        this.route.navigate(['']);
       },
       error => {
         console.log(error);
