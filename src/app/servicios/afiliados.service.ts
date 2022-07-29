@@ -14,22 +14,22 @@ export class AfiliadosService {
   constructor(private http:HttpClient) {}
 
   list(): Observable<Afiliado[]> {
-    return this.http.get<Afiliado[]>(`${this.baseURL}/lista`);
+    return this.http.get<Afiliado[]>(`${this.baseURL}/list`);
   }
 
-  search(id: number): Observable<Afiliado> {
-    return this.http.get<Afiliado>(`${this.baseURL}/buscar/${id}`);
+  search(id:number): Observable<Afiliado> {
+    return this.http.get<Afiliado>(`${this.baseURL}/search/${id}`);
   }
 
-  add(afiliado: Afiliado): Observable<any> {
-    return this.http.post(`${this.baseURL}/agregar`, afiliado);
+  add(afiliado:Afiliado): Observable<any> {
+    return this.http.post(`${this.baseURL}/add`, afiliado);
   }
 
-  edit(id: number,afiliado: Afiliado): Observable<Object> {
-    return this.http.put(`${this.baseURL}/editar/${id}`, afiliado);
+  edit(id:number,afiliado: Afiliado): Observable<Object> {
+    return this.http.put(`${this.baseURL}/edit/${id}`, afiliado);
   }
 
   delete(id: number): Observable<Object> {
-    return this.http.delete(`${this.baseURL}/eliminar/${id}`);
+    return this.http.delete(`${this.baseURL}/delete/${id}`);
   }
 }

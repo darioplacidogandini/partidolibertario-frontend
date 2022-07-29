@@ -16,5 +16,7 @@ export class InicioComponent implements OnInit {
     return this.authenticationService.isUserLoggedIn();
   }
 
-
+  public logOut() {
+    this.authenticationService.logOut();
+  }
 }

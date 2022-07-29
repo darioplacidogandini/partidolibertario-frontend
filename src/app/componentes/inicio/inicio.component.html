@@ -11,23 +11,24 @@
     </mat-grid-tile>
     <mat-grid-tile>
         <a routerLink="/iniciar-sesion"
-        *ngIf="!isUserLoggedIn()">
-            <button mat-flat-button color="primary">
+        *ngIf="!isUserLoggedIn()"> 
+            <button type="button" mat-flat-button color="primary"
+            matTooltip="Inicie sesion para ver y agregar afiliados">
                 INICIAR SESION
             </button>
         </a>
         <a *ngIf="isUserLoggedIn()">
-            <button mat-flat-button color="warn">
+            <button type="button" (click)="logOut()" mat-flat-button color="warn">
                 CERRAR SESION
             </button>
         </a>
         <a *ngIf="isUserLoggedIn()" routerLink="/agregar">
-            <button mat-flat-button color="primary">
+            <button type="button" mat-flat-button color="primary">
                 AGREGAR AFILIADO
             </button>
         </a>
         <a *ngIf="isUserLoggedIn()" routerLink="/lista">
-            <button mat-flat-button color="primary">
+            <button type="button" mat-flat-button color="primary">
                 LISTA DE AFILIADOS
             </button>
         </a>

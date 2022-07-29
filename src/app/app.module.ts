@@ -21,6 +21,7 @@ import { EditarComponent } from './componentes/editar/editar.component';
 import { DetallesComponent } from './componentes/detalles/detalles.component';
 import { MatSelect, MatSelectModule } from '@angular/material/select';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
     MatSelectModule,
     MatGridListModule,
     MatDialogModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
