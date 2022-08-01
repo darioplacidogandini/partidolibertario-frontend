@@ -31,7 +31,7 @@ export class ListaComponent implements OnInit {
   }
 
   public loadingScreen() {
-    this.dialog.open(LoadingDialog,DialogsService);
+    this.dialog.open(LoadingDialog,this.dialogsService.loadingDialogConfig);
     setTimeout(() => this.dialog.closeAll(),8000);
   }
 
