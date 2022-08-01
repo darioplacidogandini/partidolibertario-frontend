@@ -3,6 +3,7 @@ import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Afiliado } from 'src/app/model/afiliado.model';
 import { AfiliadosService } from 'src/app/servicios/afiliados.service';
+import { DialogsService } from 'src/app/servicios/dialogs.service';
 
 export interface Observaciones {
   observacines: string;
@@ -21,13 +22,17 @@ export class ListaComponent implements OnInit {
 
   displayedColumns: string[] = ['dni', 'nombre', 'apellido', 'circuito','mail', 'telefono', "actions"];
 
-  constructor(private afiliadosService:AfiliadosService,private route:Router,
-    public dialog:MatDialog) {}
+  constructor(private dialogsService:DialogsService,private afiliadosService:AfiliadosService
+    ,private route:Router,public dialog:MatDialog) {}
 
   ngOnInit(): void {
-    this.dialog.open(LoadingDialog);
-    setTimeout(() => this.listAfiliados(),8000);
-    this.dialog.closeAll();
+      this.loadingScreen();
+      this.listAfiliados();
+  }
+
+  public loadingScreen() {
+    this.dialog.open(LoadingDialog,DialogsService);
+    setTimeout(() => this.dialog.closeAll(),8000);
   }
 
   listAfiliados() {
