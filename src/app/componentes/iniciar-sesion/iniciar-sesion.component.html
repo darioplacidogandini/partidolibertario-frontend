@@ -1,11 +1,9 @@
 <form [formGroup]="loginForm" (ngSubmit)="checkLogin()">
-    <mat-grid-list cols="1" rowHeight="30px">
-      <mat-grid-tile>
+    <mat-grid-list cols="2" rowHeight="100px">
+      <mat-grid-tile colspan="2">
         <h2 mat-dialog-title>Iniciar sesión</h2>
       </mat-grid-tile>
-    </mat-grid-list>
-    <mat-grid-list cols="1" rowHeight="100px">
-        <mat-grid-tile>
+      <mat-grid-tile colspan="2">
           <mat-form-field class="form-field" appearance="fill">
             <mat-label for="username">Usuario</mat-label>
             <input matInput appearance="fill" type="text" name="username" 
@@ -14,7 +12,6 @@
               {{getErrorMessages()}}
             </mat-error>
           </mat-form-field>
-          <br>
           <mat-form-field class="form-field" appearance="fill">
             <mat-label for="password">Contraseña</mat-label>
             <input matInput appearance="fill" type="password" name="password" 
@@ -23,10 +20,8 @@
               {{getErrorMessages()}}
             </mat-error>
           </mat-form-field>
-        </mat-grid-tile>
-    </mat-grid-list>
-    <mat-grid-list cols="1" rowHeight="40px">
-      <mat-grid-tile>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2">
           <button type="submit" mat-raised-button color="primary"
             matTooltip="Iniciar sesion">
             <mat-icon>check</mat-icon>
