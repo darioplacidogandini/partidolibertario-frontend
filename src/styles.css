@@ -1,11 +1,6 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-mat-button {
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
 mat-form-field {
     margin-left: 2px;
     margin-right: 2px;
@@ -31,4 +26,9 @@ mat-form-field {
     box-shadow: none;
     color: blueviolet;
     text-align: center;
+}
+
+.button {
+    margin-left: 2px;
+    margin-right: 2px;
 }
