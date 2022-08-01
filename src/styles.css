@@ -15,6 +15,20 @@ mat-form-field {
     color: skyblue;
 }
 
+.text-accent {
+    color: blueviolet;
+}
+
 .align-row {
     flex-direction: column;
+}
+
+.loadingDialogBackground {
+    background-color: white;
+}
+
+.loadingDialogPanel >  mat-dialog-container {
+    box-shadow: none;
+    color: blueviolet;
+    text-align: center;
 }
