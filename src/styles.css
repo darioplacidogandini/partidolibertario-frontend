@@ -29,12 +29,17 @@ mat-form-field {
 }
 
 button {
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 #login-form {
     height: 400px;    
     width: 400px;
     margin: auto;
+}
+
+.mat-dialog-title {
+    margin-top: 2px;
+    margin-bottom: 0px;
 }
