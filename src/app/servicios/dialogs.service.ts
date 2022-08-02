@@ -12,7 +12,7 @@ export class DialogsService {
   constructor() {
     this.loadingDialogConfig.backdropClass = 'loadingDialogBackground';
     this.loadingDialogConfig.panelClass = 'loadingDialogPanel';
-    this.dialogConfig.disableClose = true;
-    this.dialogConfig.autoFocus = true;
+    this.loadingDialogConfig.disableClose = true;
+    this.loadingDialogConfig.autoFocus = true;
   }
 }
