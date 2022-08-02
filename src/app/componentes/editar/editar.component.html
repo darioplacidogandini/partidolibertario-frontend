@@ -1,6 +1,6 @@
-<form ngSubmit="saveChanges()">
-    <mat-grid-list cols="1" rowHeight="100px">
-    <mat-grid-tile>
+<form (ngSubmit)="saveChanges()">
+  <mat-grid-list cols="2" rowHeight="30px">
+    <mat-grid-tile colspan="2" rowspan="2">
       <mat-form-field appearance="fill">
         <mat-label>Nombre</mat-label>
         <input matInput [(ngModel)]="afiliado.nombre">
@@ -10,51 +10,39 @@
         <input matInput [(ngModel)]="afiliado.apellido">
       </mat-form-field>
     </mat-grid-tile>
-    </mat-grid-list>
-    <mat-grid-list cols="1" rowHeight="100px">
-      <mat-grid-tile>
-        <mat-form-field appearance="fill">
-          <mat-label>DNI</mat-label>
-          <input matInput [(ngModel)]="afiliado.dni">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <mat-label>Barrio</mat-label>
-            <mat-select value="barrio">
-              <mat-option *ngFor="let barrio of barrios"
-              [value]="barrio"
-              [(ngModel)]="afiliado.circuito">
-                {{barrio}}
-              </mat-option>
-            </mat-select>
-        </mat-form-field>
-      </mat-grid-tile>
-      </mat-grid-list>
-      <mat-grid-list cols="1" rowHeight="100px">
-        <mat-grid-tile>
-          <mat-form-field appearance="fill">
-            <mat-label>Mail</mat-label>
-            <input matInput [(ngModel)]="afiliado.mail">
-          </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Telefono</mat-label>
-            <input matInput [(ngModel)]="afiliado.telefono">
-          </mat-form-field>
-        </mat-grid-tile>
-        </mat-grid-list>
-        <mat-grid-list cols="1" rowHeight="100px">
-          <mat-grid-tile>
-            <mat-form-field appearance="fill">
-              <mat-label>Observaciones</mat-label>
-              <input matInput [(ngModel)]="afiliado.observaciones">
-            </mat-form-field>
-          </mat-grid-tile>
-        </mat-grid-list>
-    <mat-grid-list cols="1" rowHeight="50px">
-      <mat-grid-tile>
-        <button type="submit" mat-flat-button color="primary">GUARDAR CAMBIOS</button>
-        <button type="button" routerLink="/lista" mat-flat-button color="accent">VOLVER</button>
-      </mat-grid-tile>
-    </mat-grid-list>
-  </form>
+    <mat-grid-tile colspan="2" rowspan="2">
+      <mat-form-field appearance="fill">
+        <mat-label>DNI</mat-label>
+        <input matInput [(ngModel)]="afiliado.dni">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-select value="barrio">
+          <mat-option *ngFor="let barrio of barrios" [value]="barrio">
+            {{barrio}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="2">
+      <mat-form-field appearance="fill">
+        <mat-label>Mail</mat-label>
+        <input matInput [(ngModel)]="afiliado.mail">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Telefono</mat-label>
+        <input matInput [(ngModel)]="afiliado.telefono">
+      </mat-form-field>
+    </mat-grid-tile> 
+    <mat-grid-tile colspan="2" rowspan="2">
+      <mat-form-field appearance="fill">
+        <mat-label>Observaciones</mat-label>
+        <input matInput [(ngModel)]="afiliado.observaciones ">
+      </mat-form-field>
+    </mat-grid-tile>   
+    <mat-grid-tile colspan="2">
+      <button type="submit" mat-flat-button color="primary">AGREGAR</button>
+      <button type="button" routerLink="" mat-flat-button color="accent">VOLVER</button>
+    </mat-grid-tile>    
+  </mat-grid-list>
+</form>
 
-  
