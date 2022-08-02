@@ -34,8 +34,7 @@ button {
 }
 
 #login-form {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 400px;    
+    width: 400px;
+    margin: auto;
 }
