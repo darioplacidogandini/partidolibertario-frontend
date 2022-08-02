@@ -1,15 +1,13 @@
-<mat-grid-list class="align-column" cols="1" rowHeight="300px">
-    <mat-grid-tile>
-        <img src="https://pbs.twimg.com/profile_images/1009444251330056193/icELSwCh_400x400.jpg">
+<mat-grid-list class="align-column" cols="2" rowHeight="40px">
+    <mat-grid-tile colspan="2" rowspan="10">
+        <img src="https://partidolibertariorn.com.ar/wp-content/uploads/2020/06/cropped-Logo-png.png">
     </mat-grid-tile>
-</mat-grid-list>
-<mat-grid-list cols="1" rowHeight="80px">
-    <mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="1">
         <h1 class="text-primary">
             Partido Libertario Corrientes
         </h1>
     </mat-grid-tile>
-    <mat-grid-tile>
+    <mat-grid-tile colspan="2">
         <a routerLink="/iniciar-sesion"
         *ngIf="!isUserLoggedIn()"> 
             <button type="button" mat-flat-button color="primary"
@@ -32,8 +30,5 @@
                 LISTA DE AFILIADOS
             </button>
         </a>
-    </mat-grid-tile>
-    <mat-grid-tile>
-
     </mat-grid-tile>
 </mat-grid-list>
