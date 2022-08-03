@@ -21,9 +21,9 @@
             <mat-error *ngIf="loginForm.invalid">
               {{getErrorMessages()}}
             </mat-error>
-            <div *ngIf="invalidLogin">
+            <mat-error *ngIf="invalidLogin">
               {{getErrorMessages()}}
-            </div>
+            </mat-error>
           </mat-form-field>
       </mat-grid-tile>
       <mat-grid-tile colspan="2">
