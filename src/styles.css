@@ -26,6 +26,8 @@ mat-form-field {
     box-shadow: none;
     color: blueviolet;
     text-align: center;
+    height: 200px;
+    width: 200px;
 }
 
 #login-form {
