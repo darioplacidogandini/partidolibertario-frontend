@@ -36,12 +36,16 @@
     <mat-grid-tile colspan="2" rowspan="2">
       <mat-form-field appearance="fill">
         <mat-label>Observaciones</mat-label>
-        <input matInput [(ngModel)]="afiliado.observaciones ">
+        <input matInput [(ngModel)]="afiliado.observaciones">
       </mat-form-field>
     </mat-grid-tile>   
     <mat-grid-tile colspan="2">
-      <button type="submit" mat-flat-button color="primary">AGREGAR</button>
-      <button type="button" routerLink="" mat-flat-button color="accent">VOLVER</button>
+      <button type="submit" mat-flat-button color="primary">
+        <mat-icon>check</mat-icon>
+      </button>
+      <button type="button" routerLink="" mat-flat-button color="accent">
+        <mat-icon>cancel</mat-icon>
+      </button>
     </mat-grid-tile>    
   </mat-grid-list>
 </form>
