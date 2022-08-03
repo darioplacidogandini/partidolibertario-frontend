@@ -9,7 +9,7 @@
             <input matInput appearance="fill" type="text" name="username" 
             autocomplete="username" formControlName="username" required>
             <mat-error *ngIf="loginForm.invalid">
-              {{getErrorMessages()}}
+              {{getErrorMessages(false)}}
             </mat-error>
           </mat-form-field>
       </mat-grid-tile>
