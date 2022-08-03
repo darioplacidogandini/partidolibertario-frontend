@@ -30,6 +30,9 @@ export class IniciarSesionComponent implements OnInit {
      if (this.loginForm.get('username')?.hasError('required')) {
       return 'Rellene este campo';
      }
+     if (this.invalidLogin === true) {
+      return 'Usuario y/o contraseña invalidos';
+     }
      return 'Rellene este campo';
   }
 
