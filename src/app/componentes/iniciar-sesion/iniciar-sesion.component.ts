@@ -26,11 +26,11 @@ export class IniciarSesionComponent implements OnInit {
 
  ngOnInit() {}
 
-  public getErrorMessages() {
+  public getErrorMessages(error:boolean) {
      if (this.loginForm.get('username')?.hasError('required')) {
       return 'Rellene este campo';
      }
-     if (this.invalidLogin === true) {
+     if (error === true) {
       return 'Usuario y/o contraseña invalidos';
      }
      return 'Rellene este campo';
@@ -48,7 +48,7 @@ export class IniciarSesionComponent implements OnInit {
       error => {
         console.log(error);
         this.invalidLogin = true;
-        this.getErrorMessages();
+        this.getErrorMessages(this.invalidLogin);
       }
     ));
   }

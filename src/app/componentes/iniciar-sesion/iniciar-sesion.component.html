@@ -19,12 +19,13 @@
             <input matInput appearance="fill" type="password" name="password" 
             autocomplete="current-password" formControlName="password" required>
             <mat-error *ngIf="loginForm.invalid">
-              {{getErrorMessages()}}
+              {{getErrorMessages(false)}}
             </mat-error>
           </mat-form-field>
       </mat-grid-tile>
       <mat-grid-tile colspan="2">
-          <button type="submit" mat-raised-button color="primary"
+          <div class="button-row">
+            <button type="submit" mat-raised-button color="primary"
             matTooltip="Iniciar sesion">
             <mat-icon>check</mat-icon>
           </button>
@@ -34,6 +35,7 @@
             <mat-icon>cancel</mat-icon>
           </button>
           </a>
+          </div>
       </mat-grid-tile>
     </mat-grid-list>
   </form>
