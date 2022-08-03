@@ -8,8 +8,8 @@
             <mat-label for="username">Usuario</mat-label>
             <input matInput appearance="fill" type="text" name="username" 
             autocomplete="username" formControlName="username" required>
-            <mat-error *ngIf="loginForm.invalid">
-              {{getErrorMessages(false)}}
+            <mat-error *ngIf="loginForm.invalid || invalidLogin">
+              {{getErrorMessages()}}
             </mat-error>
           </mat-form-field>
       </mat-grid-tile>
@@ -18,8 +18,8 @@
             <mat-label for="password">Contraseña</mat-label>
             <input matInput appearance="fill" type="password" name="password" 
             autocomplete="current-password" formControlName="password" required>
-            <mat-error *ngIf="loginForm.invalid">
-              {{getErrorMessages(false)}}
+            <mat-error *ngIf="loginForm.invalid || invalidLogin">
+              {{getErrorMessages()}}
             </mat-error>
           </mat-form-field>
       </mat-grid-tile>
