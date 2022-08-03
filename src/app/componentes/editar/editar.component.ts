@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Afiliado } from 'src/app/model/afiliado.model';
 import { AfiliadosService } from 'src/app/servicios/afiliados.service';
 import * as data from '../../../assets/barrios.json';
@@ -17,10 +17,10 @@ export class EditarComponent implements OnInit {
   afiliado: Afiliado = new Afiliado();
 
   constructor(private afiliadoService:AfiliadosService,
-    private router:Router,private route:ActivatedRoute,public dialog:MatDialog) {}
+  private route:Router,private dialog:MatDialog) {}
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.afiliadoService.id;
     this.afiliadoService.search(this.id).subscribe(data => {
       this.afiliado = data;
     },error => console.log(error));
@@ -32,7 +32,7 @@ export class EditarComponent implements OnInit {
         console.log(data);
       });
     this.dialog.open(editarDialog);
-    this.router.navigate(['lista']);
+    this.route.navigate(['lista']);
   }
 
 }

@@ -42,6 +42,7 @@ export class ListaComponent implements OnInit {
   }
 
   editAfiliado(id:number) {
+    this.afiliadosService.id = id;
     this.route.navigate(['editar',id]);
   }
 
