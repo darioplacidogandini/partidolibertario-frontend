@@ -28,13 +28,9 @@ mat-form-field {
     text-align: center;
 }
 
-.button {
-    margin: 2px;
-}
-
 #login-form {
     height: 400px;    
-    width: 400px;
+    width: 250px;
     margin: auto;
 }
 
