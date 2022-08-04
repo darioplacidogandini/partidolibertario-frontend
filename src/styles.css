@@ -6,6 +6,14 @@ mat-form-field {
     margin-right: 2px;
 }
 
+table {
+    width: 100%;
+}
+
+.mat-column-actions {
+    width: 40px;
+}
+
 .header {
     background-color: skyblue;
     margin-top: 3px;
