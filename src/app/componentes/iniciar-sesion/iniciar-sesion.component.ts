@@ -30,7 +30,7 @@ export class IniciarSesionComponent implements OnInit {
      if (this.loginForm.get('username')?.hasError('required')) {
       return 'Rellene este campo';
      }
-     return '';
+     return 'Usuario y/o contraseña incorrectos';
   }
 
   public checkLogin() {

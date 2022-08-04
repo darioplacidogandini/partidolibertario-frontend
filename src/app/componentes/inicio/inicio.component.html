@@ -1,8 +1,5 @@
 <mat-grid-list class="align-column" cols="2" rowHeight="40px">
     <mat-grid-tile colspan="1">
-
-    </mat-grid-tile>
-    <mat-grid-tile colspan="1">
         <a *ngIf="isUserLoggedIn()">
             <button type="button" (click)="logOut()" 
             mat-flat-button color="warn">
@@ -14,7 +11,7 @@
         <img src="https://partidolibertariorn.com.ar/wp-content/uploads/2020/06/cropped-Logo-png.png">
     </mat-grid-tile>
     <mat-grid-tile colspan="2" rowspan="1">
-        <h1 class="text-primary">
+        <h1 class="header">
             Partido Libertario Corrientes
         </h1>
     </mat-grid-tile>
