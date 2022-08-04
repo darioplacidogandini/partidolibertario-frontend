@@ -10,13 +10,12 @@ table {
     width: 100%;
 }
 
-.mat-column-actions {
-    width: 40px;
+.mat-cell {
     padding: 0;
 }
 
-.mat-column-dni {
-    padding: 0;
+.mat-column-actions {
+    width: 40px;
 }
 
 .header {
