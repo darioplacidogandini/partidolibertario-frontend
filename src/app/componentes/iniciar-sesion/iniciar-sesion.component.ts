@@ -45,6 +45,7 @@ export class IniciarSesionComponent implements OnInit {
       error => {
         console.log(error);
         this.invalidLogin = true;
+        this.loginForm.markAsDirty();
       }
     ));
   }

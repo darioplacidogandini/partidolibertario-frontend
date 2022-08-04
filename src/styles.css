@@ -8,6 +8,7 @@ mat-form-field {
 
 table {
     width: 100%;
+    padding: 0;
 }
 
 .mat-column-actions {
@@ -15,7 +16,7 @@ table {
 }
 
 .header {
-    background-color: skyblue;
+    color: skyblue;
     margin-top: 3px;
     margin-bottom: 3px;
 }
