@@ -8,11 +8,15 @@ mat-form-field {
 
 table {
     width: 100%;
-    padding: 0;
 }
 
 .mat-column-actions {
     width: 40px;
+    padding: 0;
+}
+
+.mat-column-dni {
+    padding: 0;
 }
 
 .header {
