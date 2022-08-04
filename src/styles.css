@@ -6,8 +6,10 @@ mat-form-field {
     margin-right: 2px;
 }
 
-.text-primary {
-    color: skyblue;
+.header {
+    background-color: skyblue;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
 
 .text-accent {
@@ -26,8 +28,6 @@ mat-form-field {
     box-shadow: none;
     color: blueviolet;
     text-align: center;
-    height: 200px;
-    width: 200px;
 }
 
 .button-row {
@@ -37,16 +37,7 @@ mat-form-field {
   }
 
 #login-form {
-    height: 400px;    
-    width: 250px;
     margin: auto;
 }
 
-.mat-dialog-title {
-    margin-top: 2px;
-    margin-bottom: 0px;
-}
 
-.error {
-    color: #dc143c;
-}
