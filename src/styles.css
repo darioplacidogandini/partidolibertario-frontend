@@ -1,5 +1,11 @@
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+    height: 100%; 
+}
+
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
 
 mat-form-field {
     margin-left: 2px;
@@ -10,12 +16,13 @@ table {
     width: 100%;
 }
 
-.mat-cell {
+.mat-column-actions {
+    width: 40px;
     padding: 0;
 }
 
-.mat-column-actions {
-    width: 40px;
+.mat-column-dni {
+    padding: 0;
 }
 
 .header {
