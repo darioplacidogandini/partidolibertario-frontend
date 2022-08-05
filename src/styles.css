@@ -18,11 +18,11 @@ table {
 
 .mat-column-actions {
     width: 40px;
-    padding: 0;
+    padding: 0 !important;
 }
 
 .mat-column-dni {
-    padding: 0;
+    padding: 0 !important;
 }
 
 .header {
