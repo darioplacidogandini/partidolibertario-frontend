@@ -65,8 +65,10 @@ table {
     }
 
     .button {
-        width: 35px !important;
-        height: 35px !important;
+        font-size: 9px;
+        line-height: 18px;
+        height: auto;
+        width: auto;
     }   
 }
 
