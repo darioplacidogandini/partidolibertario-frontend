@@ -59,4 +59,15 @@ table {
     margin: auto;
 }
 
+@media (max-width: 500px) {
+    .no-mobile {
+        display: none;
+    }
+
+    .button {
+        width: 35px;
+        height: 35px;
+    }
+}
+
 

@@ -17,23 +17,23 @@
     </th>
     <td mat-cell *matCellDef="let afiliado"> {{afiliado.apellido}} </td>
   </ng-container>
-  <ng-container matColumnDef="circuito">
-    <th mat-header-cell *matHeaderCellDef>
+  <ng-container class="no-mobile" matColumnDef="circuito">
+    <th class="no-mobile" mat-header-cell *matHeaderCellDef>
       Circuito
     </th>
-    <td mat-cell *matCellDef="let afiliado"> {{afiliado.circuito}} </td>
+    <td class="no-mobile" mat-cell *matCellDef="let afiliado"> {{afiliado.circuito}} </td>
   </ng-container>
-  <ng-container matColumnDef="mail">
-    <th mat-header-cell *matHeaderCellDef>
+  <ng-container class="no-mobile" matColumnDef="mail">
+    <th  class="no-mobile"mat-header-cell *matHeaderCellDef>
       Mail
     </th>
-    <td mat-cell *matCellDef="let afiliado"> {{afiliado.mail}} </td>
+    <td class="no-mobile" mat-cell *matCellDef="let afiliado"> {{afiliado.mail}} </td>
   </ng-container>
-  <ng-container matColumnDef="telefono">
-    <th mat-header-cell *matHeaderCellDef>
+  <ng-container class="no-mobile" matColumnDef="telefono">
+    <th class="no-mobile" mat-header-cell *matHeaderCellDef>
       Telefono
     </th>
-    <td mat-cell *matCellDef="let afiliado"> {{afiliado.telefono}} </td>
+    <td class="no-mobile" mat-cell *matCellDef="let afiliado"> {{afiliado.telefono}} </td>
   </ng-container>
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef>
@@ -42,14 +42,14 @@
         </button>
     </th>
     <td mat-cell *matCellDef="let afiliado">
-      <button (click)="editAfiliado(afiliado.id)"
+      <button class="button" (click)="editAfiliado(afiliado.id)"
       mat-mini-fab color="primary">
         <mat-icon>edit</mat-icon>
       </button>
-      <button (click)="viewDetalles(afiliado.id)" mat-mini-fab color="accent">
+      <button class="button" (click)="viewDetalles(afiliado.id)" mat-mini-fab color="accent">
         <mat-icon>notes</mat-icon>
       </button>
-      <button (click)="deleteAfiliado(afiliado.id)" mat-mini-fab color="warn">
+      <button class="button" (click)="deleteAfiliado(afiliado.id)" mat-mini-fab color="warn">
         <mat-icon>delete</mat-icon>
       </button>   
     </td>
