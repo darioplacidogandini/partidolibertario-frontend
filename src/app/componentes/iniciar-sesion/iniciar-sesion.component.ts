@@ -46,6 +46,7 @@ export class IniciarSesionComponent implements OnInit {
         console.log(error);
         this.invalidLogin = true;
         this.loginForm.markAsDirty();
+        alert('Usuario y/o contraseña incorrectos');
       }
     ));
   }
