@@ -16,7 +16,7 @@ export class IniciarSesionComponent implements OnInit {
   passwordFieldValue: string = '';
   invalidLogin = false;
 
-  constructor(private route:Router,private formBuilder:FormBuilder,public loginDialog:MatDialog,
+  constructor(private route:Router,private formBuilder:FormBuilder,public dialog:MatDialog,
     private loginservice: AuthenticationService) {
       this.loginForm = this.formBuilder.group({
         username: new FormControl('', [Validators.required]),
@@ -46,8 +46,15 @@ export class IniciarSesionComponent implements OnInit {
         console.log(error);
         this.invalidLogin = true;
         this.loginForm.markAsDirty();
-        alert('Usuario y/o contraseña incorrectos');
+        this.dialog.open(invalidLoginDialog);
       }
     ));
   }
 }
+
+
+@Component({
+  selector: 'invalid-login.dialog',
+  templateUrl: 'invalidLoginDialog.html',
+})
+export class invalidLoginDialog {}
