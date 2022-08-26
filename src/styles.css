@@ -64,8 +64,9 @@ table {
         display: none;
     }
 
-    body {
-        font-size: 10px;
+    .mat-flat-button {
+        font-size: 12px;
+        font-weight: bolder;
     }
 }
 
