@@ -55,6 +55,6 @@ export class IniciarSesionComponent implements OnInit {
 
 @Component({
   selector: 'invalid-login.dialog',
-  templateUrl: 'invalidLoginDialog.html',
+  templateUrl: 'invalid-login.dialog.html',
 })
 export class invalidLoginDialog {}
