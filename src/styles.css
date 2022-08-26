@@ -64,12 +64,9 @@ table {
         display: none;
     }
 
-    .button {
-        font-size: 9px;
-        line-height: 18px;
-        height: auto;
-        width: auto;
-    }   
+    body {
+        font: 10px;
+    }
 }
 
 
